@@ -1,8 +1,22 @@
+/* Image hover scale animation */
+.hover-grow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover-grow:hover {
+  transform: scale(1.05);
+}
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #18181b;
+  --primary: #2563eb;
+  --secondary: #64748b;
+  --card-bg: #fff;
+  --card-bg-dark: #18181b;
+  --border-radius: 1.25rem;
+  --shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
 }
 
 @theme inline {
@@ -11,6 +25,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -22,5 +37,110 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  line-height: 1.7;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0070f3;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+@media (min-width: 640px) {
+  section {
+    margin-bottom: 3rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #101014;
+    color: #ededed;
+  }
+  section {
+    background: var(--card-bg-dark);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7em;
+}
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5em;
+}
+
+ul, ol {
+  margin-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-xl {
+  border-radius: 1.25rem;
+}
+
+.rounded-md {
+  border-radius: 0.75rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-2xl {
+  max-width: 48rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
