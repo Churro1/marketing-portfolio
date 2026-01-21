@@ -14,7 +14,7 @@ export default function Hero() {
       />
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Charlie Miner</h1>
       <p className="text-lg sm:text-xl md:text-2xl max-w-xl">
-        Digital Marketing Specialist
+        Digital Marketing Specialist & Computer Science Student
       </p>
     </section>
   );

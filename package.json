@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "export": "GITHUB_PAGES=true next build && next export",
-    "deploy": "npm run export && gh-pages -d out"
+    "export": "next build",
+    "deploy": "npm run build && gh-pages -d out"
   },
   "dependencies": {
     "next": "16.1.4",
