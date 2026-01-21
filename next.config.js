@@ -5,6 +5,9 @@ const nextConfig = {
   output: 'export',
   basePath: isGithubPages ? '/marketing-portfolio' : '',
   assetPrefix: isGithubPages ? '/marketing-portfolio/' : '',
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
