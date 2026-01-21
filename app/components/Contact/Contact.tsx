@@ -18,6 +18,7 @@ export default function Contact() {
         >
           charliejminer@gmail.com
         </a>
+        <div>También hablo español</div>
       </div>
     </section>
   );
