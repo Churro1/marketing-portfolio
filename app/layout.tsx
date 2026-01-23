@@ -24,6 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        {/* Optionally keep the .ico as fallback: <link rel="alternate icon" href="/favicon.ico" /> */}
+      </head>
       <body
         className={`min-h-screen flex flex-col bg-background text-foreground ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
